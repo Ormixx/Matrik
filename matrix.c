@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#define MAX 100
 
 typedef struct {
 int matrixgraph[MAX][MAX];
@@ -12,14 +13,17 @@ int main (void)
 size_t j, k;
 matrix m;
 
-int LoadMatrix(matrix *m);
 
-if (LoadMatrix (&m) == -1) {
-    fprintf (stderr, "error: LoadMatrix failed.\n");
+
+
+if (LoadMatrix(&m) == -1) {
+    fprintf(stderr, "error: LoadMatrix failed.\n");
+
     return 1;
 }
 
 printf ("\nThe %zux%zu matrix read from file is:\n\n", m.rows, m.cols);    
+
 for (j = 0; j < m.rows; j++) {
     char *pad = " [ "; 
     for (k = 0; k < m.cols; k++) {
@@ -29,6 +33,7 @@ for (j = 0; j < m.rows; j++) {
     printf (" ]\n");
 }
 putchar ('\n');
+
 
 return 0;
 }
