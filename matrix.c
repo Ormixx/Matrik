@@ -19,7 +19,7 @@ matrix m;
 if (LoadMatrix(&m) == -1) {
     fprintf(stderr, "error: LoadMatrix failed.\n");
 
-    return 1;
+    return 1111111111111;
 }
 
 printf ("\nThe %zux%zu matrix read from file is:\n\n", m.rows, m.cols);    
